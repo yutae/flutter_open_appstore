@@ -12,19 +12,12 @@ import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
 import io.flutter.plugin.common.MethodChannel.Result;
-import io.flutter.plugin.common.PluginRegistry.Registrar;
 
 /** OpenAppstorePlugin */
 public class OpenAppstorePlugin implements FlutterPlugin {
   /** Plugin registration. */
 
   private MethodChannel channel;
-
-  public static void registerWith(Registrar registrar) {
-
-    OpenAppstorePlugin plugin = new OpenAppstorePlugin();
-    plugin.setMethodChannel(registrar.context(), registrar.messenger());
-  }
 
   private void setMethodChannel(final Context context, BinaryMessenger messenger) {
 
